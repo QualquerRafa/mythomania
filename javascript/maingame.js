@@ -393,11 +393,12 @@ function get_battle_results(type) {
 }
 
 function prepare_next_battle(){
-    
-
     //Check for game end
     if (player_collection.length >= Object.keys(mythomania_cards).length) {
         window.alert("Você venceu o jogo coletando todas as " + player_collection.length.toString() + " cartas! \nForam necessárias " + turn_count.toString() + " rodadas para você vencer." );
+        return
+    } else if (player_collection.length <= 0) { 
+        window.alert("Você perdeu o jogo e não tem mais cartas... \nForam necessárias " + turn_count.toString() + " rodadas para você perder." );
         return
     }
 
