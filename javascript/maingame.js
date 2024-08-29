@@ -9,7 +9,7 @@ function preload_images(){
     for (var i = 1; i < Object.keys(mythomania_cards).length; i++) {
         images[i] = new Image();
         images[i].src = "images/artes/" + mythomania_cards[i].nome + ".jpg";
-        console.log("preloaded " + mythomania_cards[i].nome)
+        //console.log("preloaded " + mythomania_cards[i].nome)
     }
 }
 
