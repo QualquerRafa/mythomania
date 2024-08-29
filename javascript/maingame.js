@@ -114,7 +114,11 @@ function update_card(card_id, ref_attribute_id){
   
     document.getElementById("card-numero_" + ref_attribute_id).innerHTML = card_id.toString()
     document.getElementById("card-nome_" + ref_attribute_id).innerHTML = card_name
-  
+    document.getElementById("card-arte_" + ref_attribute_id).src = "images/artes/" + card_name + ".png"
+    document.getElementById("valor-magia_" + ref_attribute_id).innerHTML = card_magia
+    document.getElementById("valor-força_" + ref_attribute_id).innerHTML = card_força
+    document.getElementById("valor-fogo_" + ref_attribute_id).innerHTML = card_fogo
+
     if (card_name.length >= 15){
       document.getElementById("card-nome_" + ref_attribute_id).style.fontSize = "28.5px"
     } else {
@@ -122,21 +126,13 @@ function update_card(card_id, ref_attribute_id){
     }
 
     document.getElementById("identificação-bg_" + ref_attribute_id).style.backgroundImage = "url('images/id-box.png')"
-    if (card_name.length >= 5) {
-        document.getElementById("identificação-bg_" + ref_attribute_id).style.backgroundImage = "url('images/id-box-2.png')"
-    }
-    if (card_name.length >= 7) {
-        document.getElementById("identificação-bg_" + ref_attribute_id).style.backgroundImage = "url('images/id-box-longer.png')"
-    }
     if (card_name.length >= 10) {
         document.getElementById("identificação-bg_" + ref_attribute_id).style.backgroundImage = "url('images/id-box-longest.png')"
+    } else if (card_name.length >= 7) {
+        document.getElementById("identificação-bg_" + ref_attribute_id).style.backgroundImage = "url('images/id-box-longer.png')"
+    } else if (card_name.length >= 5) {
+        document.getElementById("identificação-bg_" + ref_attribute_id).style.backgroundImage = "url('images/id-box-2.png')"
     }
-
-    document.getElementById("card-arte_" + ref_attribute_id).src = "images/artes/" + card_name + ".png"
-  
-    document.getElementById("valor-magia_" + ref_attribute_id).innerHTML = card_magia
-    document.getElementById("valor-força_" + ref_attribute_id).innerHTML = card_força
-    document.getElementById("valor-fogo_" + ref_attribute_id).innerHTML = card_fogo
 }
 
 /* -------------------------------------- */

@@ -229,8 +229,8 @@ body {
     color: whitesmoke;
     line-height: 30px;
 
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
 .coleção-contador{
     color: rgb(255,239,221);
@@ -247,12 +247,15 @@ body {
     -webkit-text-stroke: 8px rgb(61, 61, 61);
     paint-order: stroke fill;
 
+    background-color: rgb(197, 128, 0);
+    border-color: rgb(95, 30, 0);
+    border-radius: 5px;
     width: 200px;
     height: 48px;
 
     position: absolute;
-    margin-top: -220px;
-    margin-left: 765px;
+    margin-top: -28px;
+    margin-left: -105px;
 
     visibility: hidden;
 }
