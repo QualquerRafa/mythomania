@@ -4,7 +4,19 @@ let starting_count = 10;
 let player_collection = [];
 let turn_count = 0;
 
+function preload_images(){
+    let images = []
+    for (var i = 1; i < Object.keys(mythomania_cards).length; i++) {
+        images[i] = new Image();
+        images[i].src = "images/artes/" + mythomania_cards[i].nome + ".jpg";
+        console.log("preloaded " + mythomania_cards[i].nome)
+    }
+}
+
 function initialize_collection() {
+    //load it all at first
+    preload_images()
+
     //Generate the initial list of Cards the player has at the beggining of the game
     while (player_collection.length < starting_count) {
         let rnd_max_fix = (Object.keys(mythomania_cards).length - 1) + 1
@@ -51,7 +63,7 @@ function create_front_card(i){
             </div>
 
             <div class="card-arte">
-                <img class="arte" id="card-arte_${indentifier}" src="images/artes/zeus.png">
+                <img class="arte" id="card-arte_${indentifier}" src="images/artes/zeus.jpg">
             </div>
 
             <div class="card-status">
@@ -114,7 +126,7 @@ function update_card(card_id, ref_attribute_id){
   
     document.getElementById("card-numero_" + ref_attribute_id).innerHTML = card_id.toString()
     document.getElementById("card-nome_" + ref_attribute_id).innerHTML = card_name
-    document.getElementById("card-arte_" + ref_attribute_id).src = "images/artes/" + card_name + ".png"
+    document.getElementById("card-arte_" + ref_attribute_id).src = "images/artes/" + card_name + ".jpg"
     document.getElementById("valor-magia_" + ref_attribute_id).innerHTML = card_magia
     document.getElementById("valor-força_" + ref_attribute_id).innerHTML = card_força
     document.getElementById("valor-fogo_" + ref_attribute_id).innerHTML = card_fogo
@@ -222,7 +234,7 @@ function create_player_card(card_id) {
             </div>
 
             <div class="card-arte">
-                <img class="arte" id="card-arte_${indentifier}" src="images/artes/zeus.png">
+                <img class="arte" id="card-arte_${indentifier}" src="images/artes/zeus.jpg">
             </div>
 
             <div class="card-status">
@@ -292,7 +304,7 @@ function create_enemy_card(card_id) {
             </div>
 
             <div class="card-arte">
-                <img class="arte" id="card-arte_${indentifier}" src="images/artes/zeus.png">
+                <img class="arte" id="card-arte_${indentifier}" src="images/artes/zeus.jpg">
             </div>
 
             <div class="card-status">
