@@ -1,0 +1,270 @@
+@import url('https://fonts.cdnfonts.com/css/dalek-pinpoint');
+:root {
+    --greek-font : 'Dalek Pinpoint', sans-serif;
+}
+
+body {
+    background-color: rgb(13, 37, 172);
+    font-weight: bold;
+
+    display: table;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+/* ---------------------------------------- */
+.mythomania-card{
+    pointer-events: none;
+
+    width: 430px;
+    height: 670px;
+
+    background-image: url("images/papyrus.jpg");
+    background-size: 100% 100%;
+
+    border-radius: 12px;
+    box-shadow: 0 8px 6px -6px black; 
+
+    display: flex;
+
+    font-family: var(--greek-font);
+    font-size: 32px;
+}
+.borda-grega{
+    border: 18px solid transparent;
+    border-image: url("images/border.png") 35 round;
+    opacity: 0.5;
+    
+    margin: 7px;
+    width: 381px;
+    height: 621px;
+
+    position: absolute;
+}
+.card-conteudo{
+    border: 6px solid rgba(59, 32, 3, 0.7);
+    border-top: 5px solid rgba(227,189,108, 0.7);
+    border-bottom: 6px solid rgba(124, 71, 14, 0.7);
+    box-shadow: inset 0 0 32px black;
+
+    margin: auto;
+    width: 85%;
+    height: 90%;
+
+    z-index: 1;
+}
+
+/* ---------------------------------------- */
+.card-identificação{
+    display: flex;
+
+    background-image: url("images/id-box.png");
+    background-repeat: no-repeat;
+    min-height: 115px;
+
+    margin-left: -34px;
+    margin-top: -25px;
+}
+.card-numero{
+    color: rgb(255,239,221);
+    -webkit-text-stroke: 8px rgb(41,42,36);
+    paint-order: stroke fill;
+
+    min-width: 92px;
+    text-align: center;
+    line-height: 90px;
+    vertical-align: middle;
+}
+.card-nome{
+    color: rgb(255,239,221);
+    -webkit-text-stroke: 9px rgb(193,55,40);
+    paint-order: stroke fill;
+
+    min-width: 310px;
+    text-align: left;
+    margin-left: 35px;
+    line-height: 92px;
+    vertical-align: middle;
+}
+
+/* ---------------------------------------- */
+.card-arte{
+    height: 480px;
+    width: 366px;
+
+    margin-top: -90px;
+    position: absolute;
+    z-index: -1;
+}
+.arte {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------------------------------------- */
+.card-status{
+    background-image: url("images/hieroglips.png");
+    box-shadow: inset 0px 0px 16px 4px rgb(141, 73, 8);
+    border-top: 3px solid rgb(109, 61, 11);
+
+    margin-top: 366px;
+    height: 144px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.status-coluna{
+    margin-top: 4px;
+    
+    min-width: 121px;
+    text-align: center;
+    line-height: 115px;
+    vertical-align: middle;
+}
+
+.valor-magia{
+    paint-order: stroke fill;
+    -webkit-text-stroke: 7px rgb(197, 197, 197);
+    
+    background-image: url("images/magia.png");
+    background-repeat: no-repeat;
+    background-position: 19px 0px;
+}
+.valor-força{
+    paint-order: stroke fill;
+    -webkit-text-stroke: 7px rgb(248,249,192);
+
+    background-image: url("images/força.png");
+    background-repeat: no-repeat;
+    background-position: 13px 11px;
+}
+.valor-fogo{
+    paint-order: stroke fill;
+    -webkit-text-stroke: 7px rgb(238,247,138);
+
+    background-image: url("images/fogo.png");
+    background-repeat: no-repeat;
+    background-position: 13px 14px;
+}
+.icone-txt{
+    paint-order: stroke fill;
+    color: rgb(41,42,36);
+    -webkit-text-stroke: 6px rgb(255,239,221);
+
+    margin-top: -55px;
+}
+
+
+/* ---------------------------------------- */
+/* BACK OF THE CARDS */
+.logo{
+    transform: rotate(-90deg);
+    height: 60%;
+
+    margin-top: 33%;
+    margin-left: -32.8%;
+}
+.back-bg{
+    height: 100%;
+
+    background-image: url("images/backbg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    box-shadow: inset 0 0 42px rgb(192, 42, 5);
+}
+
+
+/* ---------------------------------------- */
+/* GAME RELATED STUFF */
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+
+    max-width: 1280px;
+}
+.collection_card {
+    /* at scale(0.5), width 220px and height 340px is perfect */
+    transform: scale(0.27) translate(-50%, -50%);
+    width: 121px;
+    height: 187px;
+}
+
+.area-de-batalha{
+    display: flex;
+
+    margin-left: 393px;    
+    margin-bottom: -50px;
+}
+.card-de-batalha{
+    /* at scale(0.5), width 220px and height 340px is perfect */
+    transform: scale(0.5) translate(-50%, -60%);
+    width: 260px;
+    height: 340px;
+}
+
+.game-interface{
+    font-size: 22px;
+    font-family: var(--greek-font);
+
+    width: 380px;
+    text-align: center;
+    line-height: 120px;
+    vertical-align: middle;
+
+    position: absolute;
+}
+.opção-de-batalha{
+    font-family: inherit;
+    font-size: inherit;
+
+    color: rgb(255,239,221);
+    -webkit-text-stroke: 8px rgb(61, 61, 61);
+    paint-order: stroke fill;
+
+    width: 100px;
+    height: 48px;
+}
+.mensagem-de-batalha{
+    color: whitesmoke;
+    line-height: 30px;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.coleção-contador{
+    color: rgb(255,239,221);
+    -webkit-text-stroke: 8px rgb(197, 128, 0);
+    text-shadow: 6px 6px 1px black;
+    paint-order: stroke fill;
+}
+
+.next-battle-btn{
+    font-family: inherit;
+    font-size: inherit;
+
+    color: rgb(255,239,221);
+    -webkit-text-stroke: 8px rgb(61, 61, 61);
+    paint-order: stroke fill;
+
+    width: 200px;
+    height: 48px;
+
+    position: absolute;
+    margin-top: -220px;
+    margin-left: 765px;
+
+    visibility: hidden;
+}
+
+.red-square {
+    width: 215px;
+    height: 335px;
+    position: absolute;
+    background-color: rgba(255,0,0, 0.5);
+    border-radius: 6px;
+    z-index: 1;
+
+    margin-left: 0px;
+    margin-top: -17px
+}
